@@ -1,0 +1,12 @@
+# one extension id per line
+hashicorp.terraform
+ms-kubernetes-tools.vscode-kubernetes-tools
+redhat.vscode-yaml
+ms-azuretools.vscode-docker
+ms-python.python
+charliermarsh.ruff
+golang.go
+timonwong.shellcheck
+eamodio.gitlens
+github.vscode-github-actions
+tim-koehler.helm-intellisense

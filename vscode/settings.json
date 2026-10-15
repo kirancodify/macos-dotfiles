@@ -1,0 +1,17 @@
+{
+  "editor.fontFamily": "JetBrainsMono Nerd Font, Menlo, monospace",
+  "editor.fontSize": 14,
+  "editor.formatOnSave": true,
+  "editor.rulers": [100],
+  "editor.minimap.enabled": false,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "yaml.schemas": {
+    "kubernetes": ["k8s/**/*.yaml", "manifests/**/*.yaml"]
+  },
+  "[terraform]": { "editor.defaultFormatter": "hashicorp.terraform" },
+  "[python]": { "editor.defaultFormatter": "charliermarsh.ruff" },
+  "redhat.telemetry.enabled": false,
+  "telemetry.telemetryLevel": "off"
+}

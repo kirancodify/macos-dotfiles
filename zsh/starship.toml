@@ -1,0 +1,31 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = false
+command_timeout = 800
+
+format = "$directory$git_branch$git_status$kubernetes$terraform$aws$gcloud$python$golang$cmd_duration$line_break$character"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[kubernetes]
+disabled = false
+format = '[⎈ $context(/$namespace)]($style) '
+style = "bold blue"
+
+[[kubernetes.contexts]]
+context_pattern = ".*prod.*"
+style = "bold red"
+
+[terraform]
+format = '[tf:$workspace]($style) '
+
+[aws]
+format = '[aws:$profile(\($region\))]($style) '
+
+[gcloud]
+disabled = true
+
+[cmd_duration]
+min_time = 2000
+format = "[⏱ $duration]($style) "

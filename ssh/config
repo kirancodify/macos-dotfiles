@@ -1,0 +1,21 @@
+# ~/.ssh/config — template installed by macos-dotfiles (copied, not linked)
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentitiesOnly yes
+  ServerAliveInterval 60
+  ServerAliveCountMax 3
+  # Uncomment to use the 1Password SSH agent instead of keychain:
+  # IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519
+
+# Home lab
+Host homelab
+  HostName 192.168.1.10
+  User admin
+  IdentityFile ~/.ssh/id_ed25519

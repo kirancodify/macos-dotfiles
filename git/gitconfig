@@ -1,0 +1,46 @@
+[user]
+  name = Kiran Kumar
+  # email is set in ~/.gitconfig.local so it can differ per machine
+[include]
+  path = ~/.gitconfig.local
+[includeIf "gitdir:~/work/"]
+  path = ~/.gitconfig.work
+
+[init]
+  defaultBranch = main
+[core]
+  pager = delta
+  editor = code --wait
+  autocrlf = input
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true
+  side-by-side = true
+  line-numbers = true
+[pull]
+  rebase = true
+[push]
+  autoSetupRemote = true
+  default = current
+[fetch]
+  prune = true
+[rebase]
+  autoStash = true
+  autoSquash = true
+[merge]
+  conflictstyle = zdiff3
+[diff]
+  algorithm = histogram
+  colorMoved = default
+[rerere]
+  enabled = true
+[branch]
+  sort = -committerdate
+[alias]
+  st = status -sb
+  lg = log --graph --pretty=format:'%C(yellow)%h%Creset %C(blue)%ad%Creset %s %C(green)(%an)%Creset%C(red)%d%Creset' --date=short
+  undo = reset --soft HEAD~1
+  amend = commit --amend --no-edit
+  wip = !git add -A && git commit -m 'wip' --no-verify
+  cleanup = !git branch --merged | grep -vE '^\\*|main|master' | xargs -r git branch -d

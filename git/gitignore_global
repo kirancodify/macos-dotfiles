@@ -1,0 +1,17 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.vscode/*.log
+.idea/
+*.swp
+.env
+.env.local
+.direnv/
+.terraform/
+*.tfstate
+*.tfstate.backup
+tfplan
+__pycache__/
+.venv/
+node_modules/
